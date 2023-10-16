@@ -32,3 +32,10 @@ body {
 header hr{
     border: .5px solid #e1e1e1;
 }
+
+.error{
+  background-color: rgb(249, 200, 200);
+  color: rgb(126, 4, 4);
+  text-align: center;
+  width: 100%;
+}

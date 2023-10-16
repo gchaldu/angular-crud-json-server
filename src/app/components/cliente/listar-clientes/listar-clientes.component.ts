@@ -31,4 +31,8 @@ export class ListarClientesComponent implements OnInit {
     console.log(this.lista)
   }
 
+  eliminarCliente(id: number){
+    this.clienteService.deleteCliente(id);
+  }
+
 }

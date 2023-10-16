@@ -1,1 +1,34 @@
-<p>nuevo-cliente works!</p>
+<section class="seccion">
+  <fieldset>
+      <legend>Nuevo Cliente</legend>
+      <form id="formulario" [formGroup]="formulario" (ngSubmit)="guardarCliente()">
+          <div class="campo">
+              <label for="apellido">Apellido: </label>
+              <input type="text" id="apellido" formControlName="apellido">
+          </div>
+          <div class="error"
+            *ngIf="validar('apellido', 'required')">
+            <span>El campo es requerido</span>
+          </div>
+          <div class="error"
+            *ngIf="validar('apellido', 'minlength')">
+            <span>Minimo 3 caracteres</span>
+          </div>
+          <div class="campo">
+              <label for="nombre">Nombre: </label>
+              <input type="text" id="nombre" formControlName="nombre">
+          </div>
+          <div class="campo">
+              <label for="dni">DNI</label>
+              <input type="number" id="dni" formControlName="dni">
+          </div>
+          <div class="campo">
+              <label for="fecha-inicio">Fecha inicio: </label>
+              <input type="date" id="fecha-inicio" formControlName="fechaInicio">
+          </div>
+          <div class="campo">
+              <input type="submit" value="Crear Cliente">
+          </div>
+      </form>
+  </fieldset>
+</section>
